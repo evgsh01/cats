@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Cats - Котики!</title>
+</head>
+<body>
+    <header class="container">
+        <div class="logo">
+            <i class="fa-solid fa-cat"></i>
+            Happy Cats!
+        </div>
+
+        <nav>
+            <div class="btn btn_pic" title="Cats from Yana">
+                <i class="fa-solid fa-palette"></i>
+            </div>
+            <div class="btn btn_add" title="Add a Cat">
+                <i class="fa-sharp fa-solid fa-paw"></i>
+            </div>
+        </nav> 
+    </header>
+
+    <main class="main container">
+        <section class="cards">
+           
+        </section>
+    </main>
+  
+    <footer class="container">
+        <span>&#169; 2023</span>
+
+        <span>
+            Made by
+            <span class="author">Evgenii</span>    
+        </span>
+
+        <span>
+            Рainted Сats - 
+            <span class="artist">Yana</span>
+        </span>
+
+    </footer>
+
+    <div class="popup popup-add">
+        <div class="popup__container" >
+            <button class="popup__close btn"><i class="fa-solid fa-xmark"></i></button>
+            <h2>Добавить питомца</h2>
+            <form class="form" id="popup-form-add">
+                <!-- <div class="form__image"></div> -->
+
+                <div class="form__input">
+                    <label for="id">ID</label>
+                    <input type="number" id="id" name="id" min="1" required placeholder="id">
+                </div>
+                
+                <div class="form__input column_2">
+                    <label for="name">Имя</label>
+                    <input type="text" id="name" name="name" required placeholder="Василиан">
+                </div>
+
+                <div class="form__input column_3">
+                    <label for="foto">Изображение</label>
+                    <input type="url" id="foto" name="img_link" placeholder="Ссылка на фото">
+                </div>
+
+                <div class="form__input">
+                    <label for="age">Возраст</label>
+                    <input type="number" id="age" name="age" placeholder="3" min="0">
+                </div>
+
+                <div class="form__input">
+                    <label for="rate">Рейтинг</label>
+                    <input type="number" id="rate" name="rate" placeholder="0-10" min="0" max="10">
+                </div>
+
+                <div class="form__input form__checkbox form__checkbox-wrap">
+                    <input type="checkbox" name="favourite" id="favourite" placeholder="">
+                    <label for="favourite">Любимчик</label>
+                </div>
+                
+                <div class="form__input form__textarea column_3">
+                    <label for="about_cat">Описание</label>
+                    <textarea name="description" id="about_cat" placeholder="Напишите что-нибудь про своего питомца" rows="3"></textarea>
+                </div>               
+
+                <button type="submit" class="btn form__btn">Добавить</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="popup popup-cat-image">
+        <div class="popup__container">
+            <button class="popup__close btn popup__close_external"><i class="fa-solid fa-xmark"></i></button>
+            <img src="#" class="popup__image" alt="">
+        </div>
+    </div>
+
+    <template id="card-template">
+        <div class="card">
+            <img src="https://i.artfile.ru/4500x3514_903167_[www.ArtFile.ru].jpg" alt="Изображение" class="card__image">
+            <a href="#" class="card__link"><h2 class="card__name">Васька</h2></a>
+            <button class="card__like" aria-label="Поставить лайк"><i class="fa-solid fa-heart fa-2x"></i></button>
+        </div>
+    </template>
+
+
+    <script src="scripts/card.js" defer></script>
+    <script src="scripts/cats.js" defer></script>
+    <script src="scripts/pic_cats.js" defer></script>
+    <script src="scripts/popup.js" defer></script>
+    <script src="scripts/popup-image.js" defer></script>
+    <script src="scripts/scripts.js" defer></script>
+</body>
+</html>
