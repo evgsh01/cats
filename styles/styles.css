@@ -6,12 +6,12 @@ body {
     grid-template-rows: auto 1fr auto;
     margin: 0;
     padding: 0;
+    color: #162078;
 }
 
 /* Стили шапки и футера*/
 .container {
     background-color: #E38B27;
-    color: #162078;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -32,9 +32,9 @@ nav {
     cursor: pointer;
 }
 
-.artist {
+/* .artist {
     color: #0168B9;
-}
+} */
 
 /* Окно добавление котика */
 /* стили модального окна */
@@ -50,7 +50,6 @@ nav {
     align-items: center;
     backdrop-filter: blur(1px);
     background-color: rgba(192, 192, 192, 0.80);
-    color: #162078;
 }
 
 .popup.active {
@@ -86,7 +85,6 @@ nav {
     align-items: center;
     height: 24px;
     width: 24px;
-    color: #162078;
     border: 1px solid #162078;
     border-radius: 50%;
     cursor: pointer;
@@ -238,16 +236,13 @@ label {
     cursor: pointer;
     justify-content: center;    
     align-items: center;
-    color: #162078;
+    color: #E38B27;
 }
 
-/* .card__like {
-    color: #E38B27;
-    font-weight: 900;
-} */
-
-
-
+.card a {
+    text-decoration: none;
+    color: #162078;
+}
 
 /* Основной контент */
 
