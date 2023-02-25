@@ -150,10 +150,6 @@ label {
     justify-content: center;
 }
 
-[disabled] {
-    background-color: rgba(30, 144, 255, 0.3);
-}
-
 [type="checkbox"] + label:before {
     font-family: "Font Awesome 6 Free";
     content: "\f004";
