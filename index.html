@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js" defer></script>
     <link rel="stylesheet" href="styles/styles.css">
     <title>Cats - Котики!</title>
 </head>
@@ -19,6 +20,9 @@
         </div>
 
         <nav>
+            <div class="btn login" title="Login">
+                <i class="fa-solid fa-right-to-bracket"></i>
+            </div>
             <div class="btn btn_pic" title="Cats from Yana">
                 <i class="fa-solid fa-palette"></i>
             </div>
@@ -103,6 +107,18 @@
         </div>
     </div>
 
+    <div class="popup popup-login">
+        <div class="popup__container" >
+            <button class="popup__close btn"><i class="fa-solid fa-xmark"></i></button>
+            <h2>Авторизация</h2>
+            <form class="form" id="popup-form-login">
+                <input type="email" class="form__input" name="email" required placeholder="email">
+                <input type="password" class="form__input" name="password" placeholder="password">
+                <button type="submit" class="form__btn btn">Войти</button>
+            </form>
+        </div>
+    </div>
+
     <template id="card-template">
         <div class="card">
             <img src="https://i.artfile.ru/4500x3514_903167_[www.ArtFile.ru].jpg" alt="Изображение" class="card__image">
@@ -112,11 +128,11 @@
     </template>
 
 
-    <script src="scripts/card.js" defer></script>
+    <!-- <script src="scripts/card.js" defer></script>
     <script src="scripts/cats.js" defer></script>
     <script src="scripts/pic_cats.js" defer></script>
     <script src="scripts/popup.js" defer></script>
-    <script src="scripts/popup-image.js" defer></script>
-    <script src="scripts/scripts.js" defer></script>
+    <script src="scripts/popup-image.js" defer></script> -->
+    <script src="scripts/scripts.js" type="module" defer></script>
 </body>
 </html>

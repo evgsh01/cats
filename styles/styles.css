@@ -99,6 +99,29 @@ nav {
     background-size: cover;
 }
 
+.popup-login h2 {
+    text-align: center;
+}
+
+#popup-form-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 /* стили контента модального окна */
 
 .form {
@@ -169,7 +192,7 @@ label {
     font-weight: 900;
 }
 
-.form__input input:focus, textarea:focus {
+.form__input input:focus, textarea:focus, #popup-form-login input:focus {
     background-color: #E38B27;
 }
 .form .btn {

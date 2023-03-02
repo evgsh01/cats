@@ -1,4 +1,4 @@
-class Card {
+export class Card {
     #data;
     #selectorTemplate;
     #element;
@@ -21,14 +21,14 @@ class Card {
         const cardLikeElement = this.#element.querySelector('.card__like');
 
         cardTitleElement.textContent = this.#data.name
-        cardImageElement.src = this.#data.img_link
+        cardImageElement.src = this.#data.image
 
-        if(!this.#data.favourite) {
+        if(!this.#data.favorite) {
             cardLikeElement.remove()
         }
 
         cardImageElement.addEventListener('click', () => {
-            this.#handleClickCatImage(this.#data.img_link);
+            this.#handleClickCatImage(this.#data.image);
         })
         //Наполнять карточку
         return this.#element;
