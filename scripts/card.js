@@ -3,15 +3,16 @@ export class Card {
     #selectorTemplate;
     #element;
     #handleClickCatImage;
-    #getTemplate(){
-        const template = document.querySelector(this.#selectorTemplate).content.querySelector('.card');
-        return template
-    }
-
+    
     constructor(data, selectorTemplate, handleClickCatImage) {
         this.#data = data;
         this.#selectorTemplate =selectorTemplate;
         this.#handleClickCatImage = handleClickCatImage;
+    }
+
+    #getTemplate(){
+        const template = document.querySelector(this.#selectorTemplate).content.querySelector('.card');
+        return template
     }
 
     getElement() {

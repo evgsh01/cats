@@ -8,7 +8,7 @@ const cardsContainer = document.querySelector('.cards');
 const btnOpenPopup = document.querySelector('.btn_add');
 const btnOpenPopupLogin = document.querySelector(".login");
 
-const btnPic = document.querySelector('.btn_pic');
+/* const btnPic = document.querySelector('.btn_pic'); */
 
 const formCatAdd = document.querySelector('#popup-form-add');
 const formLogin = document.querySelector("#popup-form-login");

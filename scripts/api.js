@@ -44,6 +44,9 @@ class Api {
             body: JSON.stringify(data)
         })
             .then(this.#getResponse)
+            .catch(function(err) {
+                console.log(err);
+            })
     }
     
     updateCatById(idCat, data){
