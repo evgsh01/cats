@@ -8,6 +8,12 @@ export class Popup {
     this._popupElement = document.querySelector(`.${classPopup}`);
   }
 
+  setContent(contentNode) {
+    const containerContent = this._popupElement.querySelector('.popup__content');
+    containerContent.innerHTML = "";
+    containerContent.append(contentNode);
+  }
+
   open() {
     this._popupElement.classList.add(`active`);
     document.addEventListener("keyup", this.#handleEscUp);
