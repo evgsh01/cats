@@ -31,6 +31,10 @@ nav {
     align-items: center;
 }
 
+nav .btn:hover {
+    opacity: 0.5;
+}
+
 .btn {
     cursor: pointer;
 }
@@ -241,6 +245,10 @@ label {
 
 .card__link h2 {
     margin: 0;
+}
+
+.card__link:hover {
+    color: #E38B27;
 }
 
 .card__like {
