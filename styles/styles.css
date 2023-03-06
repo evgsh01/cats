@@ -1,11 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Alice', serif;
     font-size: 32px;
     display: grid;
     min-height: 100vh;
     grid-template-rows: auto 1fr auto;
-    margin: 0;
-    padding: 0;
     color: #162078;
 }
 
@@ -32,9 +35,6 @@ nav {
     cursor: pointer;
 }
 
-/* .artist {
-    color: #0168B9;
-} */
 
 /* Окно добавление котика */
 /* стили модального окна */
@@ -255,12 +255,119 @@ label {
     cursor: pointer;
     justify-content: center;    
     align-items: center;
+    color: #162078;
+}
+
+.card__like_active {
     color: #E38B27;
 }
+
 
 .card a {
     text-decoration: none;
     color: #162078;
+}
+
+/* Информация о коте */
+.popup-cat-info .popup__container{
+    padding: 5px;
+}
+
+.cat-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6px;
+}
+
+.cat-info__image {
+    width: 100%;
+    grid-column: 1 / 4;
+}
+
+.cat-info__id {
+    grid-column: 1 / 2;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: #E38B27;
+    color: #162078;
+}
+.cat-info__id:before {
+    content: "id";
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cat-info__title {
+    grid-column: 2 / 3;
+    gap: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cat-info__title h2 {
+    margin: 0;
+}
+
+.cat-info__rate, .cat-info__desc {
+    grid-column: 1 / 4;
+    font-size: 0.6em;
+    text-align: center;
+}
+
+.cat-info__age {
+    grid-column: 3 / 4;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.cat-info__desc {
+    margin: 0;
+}
+
+.cat-info__favourite {
+    border: none;
+    border-color: transparent;
+    color: #162078;
+    cursor: pointer;
+}
+
+.cat-info__favourite_active {
+    color: #E38B27
+}
+
+/* Кнопки */
+.cat-info__edited, .cat-info__saved, .cat-info__deleted {
+    background-color: #162078;
+    border: none;
+    outline: none;
+    color: #fff;
+    height: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.5em;
+    height: 100%;
+    padding: 0 5px;
+}
+
+.cat-info__edited:hover, .cat-info__saved:hover, .cat-info__deleted:hover {
+    background-color: #E38B27;
+}
+
+.cat-info [contentEditable="true"] {
+    box-shadow: 0 0 1px 1px rebeccapurple;
+    outline: none;
+}
+
+.cat-info [contentEditable="true"]:focus {
+    box-shadow: 0 0 1px 1px rgb(188, 12, 56);
+    outline: none;
 }
 
 /* Основной контент */
@@ -270,9 +377,12 @@ label {
     background-color: #eee;
 }
 
+
+
 @media(max-width: 699px) {
     .container {
         flex-direction: column;
+        padding: 10px 5px;
     }
 
     nav {
@@ -288,6 +398,9 @@ label {
 @media (min-width: 700px) and (max-width: 1039px) {
     .cards {
         grid-template-columns: repeat(3, 1fr);
+    }
+    .container {
+        padding: 10px 5px;
     }
 }
 @media (min-width: 1040px) {

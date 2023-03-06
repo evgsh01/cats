@@ -9,8 +9,6 @@ const cardsContainer = document.querySelector('.cards');
 const btnOpenPopup = document.querySelector('.btn_add');
 const btnOpenPopupLogin = document.querySelector(".login");
 
-/* const btnPic = document.querySelector('.btn_pic'); */
-
 const formCatAdd = document.querySelector('#popup-form-add');
 const formLogin = document.querySelector("#popup-form-login");
 const isAuth = Cookies.get("email");
@@ -188,13 +186,6 @@ function handleEditCatInfo(cardInstance, data) {
             popupCatInfo.close();
         })
 }
-
-/* btnPic.addEventListener('click', () => {
-    picCats.forEach(catData => {
-        const newElement = new Card(catData, '#card-template', handleClickCatImage);
-        cardsContainer.append(newElement.getElement());
-    });
-}) */
 
 formCatAdd.addEventListener('submit', handleFormAddCat)
 formLogin.addEventListener("submit", handleFormLogin);

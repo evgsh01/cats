@@ -23,9 +23,6 @@
             <div class="btn login" title="Login">
                 <i class="fa-solid fa-right-to-bracket"></i>
             </div>
-            <div class="btn btn_pic" title="Cats from Yana">
-                <i class="fa-solid fa-palette"></i>
-            </div>
             <div class="btn btn_add" title="Add a Cat">
                 <i class="fa-sharp fa-solid fa-paw"></i>
             </div>
@@ -58,8 +55,6 @@
             <button class="popup__close btn"><i class="fa-solid fa-xmark"></i></button>
             <h2>Добавить питомца</h2>
             <form class="form" id="popup-form-add">
-                <!-- <div class="form__image"></div> -->
-
                 <div class="form__input">
                     <label for="id">ID</label>
                     <input type="number" id="id" name="id" min="1" required placeholder="id">
@@ -136,31 +131,24 @@
 
     <template id="cats-info-template">
         <div class="cat-info">
-            <button class="cat-info__edited"><i class="fa-regular fa-pen-to-square"></i>Редактировать</button>
-            <button class="cat-info__saved cat-info__saved_hidden"><i class="fa-regular fa-pen-to-square"></i>Сохранить</button>
-            <button class="cat-info__deleted"><i class="fa-solid fa-trash"></i>Удалить</button>
-
             <img src="#" alt="" class="cat-info__image" loading="lazy">
             <span class="cat-info__id"></span>
             <div class="cat-info__title">
                 <h2 class="cat-info__name"></h2>
                 <button class="cat-info__favourite"><i class="fa-solid fa-heart fa-2x"></i></button>
-            </div>
-            <span class="cat-info__rate"></span>
+            </div>            
             <div class="cat-info__age">
                 <span class="cat-info__age-val"></span>
                 <span class="cat-info__age-text"></span>
-            </div>
+            </div>         
+            <span class="cat-info__rate"></span>
             <p class="cat-info__desc"></p>
+            <button class="cat-info__edited"><i class="fa-regular fa-pen-to-square"></i> Редактировать</button>
+            <button class="cat-info__saved cat-info__saved_hidden"><i class="fa-regular fa-pen-to-square"></i> Сохранить</button>
+            <button class="cat-info__deleted"><i class="fa-solid fa-trash"></i> Удалить</button>
         </div>
     </template>
 
-
-    <!-- <script src="scripts/card.js" defer></script>
-    <script src="scripts/cats.js" defer></script>
-    <script src="scripts/pic_cats.js" defer></script>
-    <script src="scripts/popup.js" defer></script>
-    <script src="scripts/popup-image.js" defer></script> -->
-    <script src="scripts/scripts.js" type="module" defer></script>
+    <script src="src/index.js" type="module" defer></script>
 </body>
 </html>
